@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import TicTacToe from "./TicTacToe";
+import "papercss/dist/paper.min.css";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Main>
+        <TicTacToe />
+      </Main>
+      <Footer>
+        <FooterInner>
+          View the code on{" "}
+          <a href="https://github.com/Clarity-89/React_tic_tac_toe">Github</a>
+        </FooterInner>
+      </Footer>
+    </>
   );
 }
 
-export default App;
+const Main = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex: 0 0 auto;
+`;
+
+const FooterInner = styled.div`
+  padding: 16px 0;
+`;

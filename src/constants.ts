@@ -1,4 +1,4 @@
-//Board dimensions
+q//Board dimensions
 export const DIMENSIONS = 3;
 export const DRAW = 0;
 export const PLAYER_X = 1;
